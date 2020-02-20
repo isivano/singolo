@@ -13,13 +13,6 @@ body {
     margin: 0 auto;  
 }
 
-header {
-    height: 89px;
-    background-color: rgb(45, 48, 58);
-    border-bottom: 6px solid rgb(50, 55, 70);
-    /* background: url(../singolo1png.png) no-repeat; */
-}
-
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -27,6 +20,13 @@ a {
 
 
 /*////////////HEADER////////////*/
+
+header {
+    height: 89px;
+    background-color: rgb(45, 48, 58);
+    border-bottom: 6px solid rgb(50, 55, 70);
+    /* background: url(../singolo1png.png) no-repeat; */
+}
 
 h1 {
     font-family: "Lato-Bold", Arial, Helvetica, sans-serif;
@@ -38,7 +38,7 @@ h1 {
     left: 39.2px;  
 }
 
-h1:after {
+h1::after {
     content: "*"; 
     color: rgb(240, 108, 100); 
     font-family: "Lato-Bold", Arial, Helvetica, sans-serif;
@@ -71,7 +71,7 @@ nav li {
     margin-right: 8.4px;
 }
 
-nav li:after {
+nav li::after {
     content: '\2022'; 
     color: rgb(73, 78, 98); 
     font-family: "Lato-Black", Arial, Helvetica, sans-serif;
@@ -82,4 +82,44 @@ nav li:after {
 
 nav :nth-child(5)::after{
     content: none;
+}
+
+
+/*////////////SLIDER////////////*/
+
+.slider {
+    height: 594px;
+    background-color: rgb(240, 108, 100);
+    border-bottom: 6px solid rgb(234, 103, 107);
+    /* background: url(../singolo1Slider.png) no-repeat; */
+    position: relative;
+    z-index: 1;
+}
+
+.vertPhone{
+    display: inline-block;
+    height: 458px;
+    width: 215px;
+    position: absolute;
+
+    top: 59px;
+    left: 112px;
+    background-image: url(assets/images/Phone.png);
+    background-repeat: no-repeat;
+}
+
+.vertPhone::after{
+    position: absolute;
+    z-index: -1;
+    content: url(assets/images/PhoneShadow.png);
+}
+
+.vertPhoneScreen{
+    height: 333px;
+    width: 188px;
+    position: absolute;
+    top: 65px;
+    left: 14px;
+    background-image: url(assets/images/PhoneScreen1.png);
+    background-position: -14px -135px;
 }
