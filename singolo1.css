@@ -91,30 +91,59 @@ nav :nth-child(5)::after{
     height: 594px;
     background-color: rgb(240, 108, 100);
     border-bottom: 6px solid rgb(234, 103, 107);
-    /* background: url(../singolo1Slider.png) no-repeat; */
+    /* background: url(../singolo1Slider.png); */
     position: relative;
-    z-index: 1;
+    z-index: 1;             /* for correct display of phone shadow */
 }
 
-.vertPhone{
+#arrowPrev, #arrowNext{
+    fill: rgb(202, 69, 73);
+}
+
+#buttonPrev, #buttonNext{
+    width: 17.5px;
+    height: 28px;
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+#buttonPrev{
+    top: 280px;
+    left: 41px;
+}
+
+#buttonNext{
+    top: 280px;
+    left: 942px;
+}
+
+#buttonPrev:hover, #buttonNext:hover{
+    cursor: pointer;
+}
+
+#arrowPrev:active, #arrowNext:active{
+    fill: rgb(190, 108, 100);
+}
+
+#vertPhone{
     display: inline-block;
     height: 458px;
     width: 215px;
-    position: absolute;
-
-    top: 59px;
+    position: absolute;     /* for correct display of phone shadow (it's without z-index) */
+    top: 53px;
     left: 112px;
     background-image: url(assets/images/Phone.png);
-    background-repeat: no-repeat;
 }
 
-.vertPhone::after{
+#vertPhone::after{
     position: absolute;
-    z-index: -1;
+    z-index: -1;            /* for correct display of phone shadow */
     content: url(assets/images/PhoneShadow.png);
 }
 
-.vertPhoneScreen{
+#vertPhoneScreen{
     height: 333px;
     width: 188px;
     position: absolute;
@@ -122,4 +151,33 @@ nav :nth-child(5)::after{
     left: 14px;
     background-image: url(assets/images/PhoneScreen1.png);
     background-position: -14px -135px;
+}
+
+#horizPhone{
+    display: inline-block;
+    height: 215px;
+    width: 458px;
+    position: absolute;     /* for correct display of phone shadow (it's without z-index) */
+    top: 174px;
+    left: 425px;
+    background-image: url(assets/images/HorizontalPhone.png);
+}
+
+#horizPhone::after{
+    position: absolute;
+    z-index: -1;            /* for correct display of phone shadow */
+    content: url(assets/images/PhoneShadow.png);
+    top: -123px;
+    left: 124px;
+    transform: rotate(90deg) rotateX(180deg);
+}
+
+#horizPhoneScreen{
+    height: 188px;
+    width: 333px;
+    position: absolute;
+    top: 14px;
+    left: 60px;
+    background-image: url(assets/images/PhoneScreen2.png);
+    background-position: -125px -119px;
 }
