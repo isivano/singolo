@@ -1,9 +1,4 @@
 @font-face {
-    font-family: "Lato-Bold";
-    src: url(./assets/fonts/Lato-Bold.ttf) format('truetype');
-  }
-
-@font-face {
     font-family: "Lato-Black";
     src: url(./assets/fonts/Lato-Black.ttf) format('truetype');
 }  
@@ -33,235 +28,8 @@ a {
     color: rgb(255, 255, 255);
 }
 
-
-/*////////////HEADER////////////*/
-
-header {
-    height: 89px;
-    background-color: rgb(45, 48, 58);
-    border-bottom: 6px solid rgb(50, 55, 70);
-}
-
-h1 {
-    font-family: "Lato-Bold", Arial, Helvetica, sans-serif;
-    font-size: 18.4pt;
-    color: rgb(255, 255, 255);
-    display: inline;
-    position: relative;
-    top: 29px;
-    left: 39.2px;  
-}
-
-h1::after {
-    content: "*"; 
-    color: rgb(240, 108, 100); 
-    font-family: "Lato-Bold", Arial, Helvetica, sans-serif;
-    font-size: 18.4pt;
-}
-
-nav {
-    display: inline-block;
-    position: relative;
-    top: 29.5px;
-    left: 487px;
-}
-
-nav a{
-    font-family: "Lato-Bold", Arial, Helvetica, sans-serif;
-    font-size: 9pt;
-    color: rgb(255, 255, 255);
-}
-
-nav a:hover{
-    text-shadow:  1px 1px 1pt  rgb(240, 108, 100);
-}
-
-nav a:active{
-    color: rgb(240,108,100);
-}
-
-nav li {
-    display: inline;
-    margin-right: 28.5px;;
-    position: relative;
-}
-
-nav li::before {
-    position: absolute;
-    content: '\2022'; 
-    color: rgb(73, 78, 98); 
-    font-family: "Lato-Black", Arial, Helvetica, sans-serif;
-    font-size: 3pt;
-    top: 8px;
-    left: -15px;
-}
-
-nav :first-child::before{
-    content: none;
-}
-
-
-/*////////////SLIDER////////////*/
-
-.slider {
-    height: 594px;
-    background-color: rgb(240, 108, 100);
-    border-bottom: 6px solid rgb(234, 103, 107);
-    position: relative;
-    z-index: 1;             /* for correct display of phone shadow */
-}
-
-#arrowPrev, #arrowNext{
-    fill: rgb(202, 69, 73);
-}
-
-#buttonPrev, #buttonNext{
-    width: 17.5px;
-    height: 28px;
-    position: relative;
-    background: none;
-    border: none;
-    outline: none;
-}
-
-#buttonPrev{
-    top: 280px;
-    left: 41px;
-}
-
-#buttonNext{
-    top: 280px;
-    left: 942px;
-}
-
-#buttonPrev:hover, #buttonNext:hover{
-    cursor: pointer;
-}
-
-#arrowPrev:active, #arrowNext:active{
-    fill: rgb(206, 93, 86);
-}
-
-#vertPhone{
-    display: inline-block;
-    height: 458px;
-    width: 215px;
-    position: absolute;     /* for correct display of phone shadow (it's without z-index) */
-    top: 53px;
-    left: 112px;
-    background-image: url(assets/images/Phone.png);
-}
-
-#vertPhone::after{
-    position: absolute;
-    z-index: -1;            /* for correct display of phone shadow */
-    content: url(assets/images/PhoneShadow.png);
-}
-
-#vertPhoneScreen{
-    height: 333px;
-    width: 188px;
-    position: absolute;
-    top: 65px;
-    left: 14px;
-    background-image: url(assets/images/PhoneScreen1.png);
-    background-position: -14px -135px;
-}
-
-#horizPhone{
-    display: inline-block;
-    height: 215px;
-    width: 458px;
-    position: absolute;     /* for correct display of phone shadow (it's without z-index) */
-    top: 174px;
-    left: 425px;
-    background-image: url(assets/images/HorizontalPhone.png);
-}
-
-#horizPhone::after{
-    position: absolute;
-    z-index: -1;            /* for correct display of phone shadow */
-    content: url(assets/images/PhoneShadow.png);
-    top: -123px;
-    left: 124px;
-    transform: rotate(90deg) rotateX(180deg);
-}
-
-#horizPhoneScreen{
-    height: 188px;
-    width: 333px;
-    position: absolute;
-    top: 14px;
-    left: 60px;
-    background-image: url(assets/images/PhoneScreen2.png);
-    background-position: -125px -119px;
-}
-
-
-/*////////////SERVICES////////////*/
-
-.services {
-    height: 494px;
-    background-color: rgb(242, 242, 242);
-    border-bottom: 6px solid rgb(255, 255, 255);
-}
-
-.services h2{
-    font-family: "Lato-Black", Arial, Helvetica, sans-serif;
-    font-size: 22.2pt;
-    color: rgb(102, 109, 137);
-    padding: 60.3px 0px 0px 40px;
-}
-
-#servicesPhrase{
-    font-family: "Lato-Light", Arial, Helvetica, sans-serif;
-    font-size: 14pt;
-    color: rgb(118, 126, 158);
-    padding: 18px 0px 0px 40px;
-    letter-spacing: -0.1pt;
-    line-height: 23pt;
-}
-
-.servicesOptions {
-    display: grid;
-    grid-template: 88px 88px / 222px 222px 222px;
-    gap: 35px 97px;
-    margin: 41px 0 0 119px;
-}
-
-.option{
-    position: relative;
-}
-
-.optionIcon{
-    width: 54px;
-    height: 54px;
-    position: absolute;
-    top: 4px;
-    left: -78px;
-    border: 3px solid rgba(102, 109, 137);
-    border-radius: 100px;
-    text-align: center;
-}
-
-.optionIcon img{
-    margin: 11px 0 0 0px;
-}
-
-.optionHeadline{
-    font-family: "Lato-Black", Arial, Helvetica, sans-serif;
-    font-size: 13.5pt;
-    color: rgb(102, 109, 137);
-}
-
-.optionDescription{
-    height: 65px;
-    font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
-    font-size: 9pt;
-    color: rgb(118, 126, 158);
-    padding: 8px 0 0 1px;
-    line-height: 16pt; 
-    overflow: hidden;
+#singolo2h1 {
+    display: none;
 }
 
 
@@ -277,7 +45,7 @@ nav :first-child::before{
     font-size: 23pt;
     color: rgb(102, 109, 137);
     letter-spacing: -0.4pt;
-    padding: 61px 0px 0px 40px;
+    padding: 60px 0px 0px 40px;
 }
 
 #portfolioPhrase{
@@ -290,7 +58,7 @@ nav :first-child::before{
 }
 
 #portfolioNavigation {
-    margin: 17px 0px 0px 41px;
+    margin: 16px 0px 0px 42px;
 }
 
 #portfolioNavigation li {
@@ -298,28 +66,35 @@ nav :first-child::before{
     margin-right: 10px;
 }
 
-#portfolioNavigation a{
+#portfolioNavigation button{
+    background: none;
+    border: none;
+    outline: none;
     font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
     font-size: 9pt;
     color: rgb(118, 126, 158);
+    letter-spacing: -0.1pt;
+    word-spacing: 1pt;
     border: 1px solid rgb(102, 109, 137);
     border-radius: 4px;
     padding: 2px 6px;
 }
 
-#portfolioNavigation a:hover{
+#portfolioNavigation button:hover{
     color: rgb(222, 222, 222);
     border-color: rgb(197, 197, 197);
+    cursor: pointer;
 }
 
-#portfolioNavigation a:active{
+#portfolioNavigation button:active{
     background-color: rgb(102, 109, 137);
 }
+
 
 .portfolioGallery{
     width: 940px;
     max-height: 820px;
-    margin: 22px 0px 47px 40px;
+    margin: 20px 0px 47px 40px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -346,7 +121,7 @@ nav :first-child::before{
     font-family: "Lato-Black", Arial, Helvetica, sans-serif;
     font-size: 23pt;
     color: rgb(102, 109, 137);
-    letter-spacing: -0.4pt;
+    letter-spacing: -0.5pt;
     padding: 59px 0px 0px 40px;
 }
 
@@ -354,9 +129,9 @@ nav :first-child::before{
     font-family: "Lato-Light", Arial, Helvetica, sans-serif;
     font-size: 13pt;
     color: rgb(118, 126, 158);
-    width: 940px;
-    padding: 17px 0px 0px 40px;
-    letter-spacing: 0.2pt;
+    margin: 17px 0px 0px 40px;
+    letter-spacing: 0.3pt;
+    word-spacing: 0.2pt;
     line-height: 23pt;
 }
 
@@ -367,25 +142,25 @@ nav :first-child::before{
     margin: 45px 0 0 40px;
 }
 
-
 .employeeName{
-    /* width: 300px;
-    height: 24px; */
-    margin: 11px 0 0 -2px;
+    margin: 11px 0 0 -1px;
     font-family: "Lato-Black", Arial, Helvetica, sans-serif;
     font-size: 13.5pt;
     color: rgb(102, 109, 137);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    word-spacing: -1pt;
 }
 
 .employeeDescription{
     font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
     font-size: 9pt;
     color: rgb(118, 126, 158);
-    margin: 8px 0 0 1px;
+    margin: 8px 0 0 0;
     line-height: 16pt;
+    word-spacing: 0.4pt;
+    letter-spacing: -0.1pt;
 }
 
 .socials{
@@ -418,4 +193,8 @@ nav :first-child::before{
 
 .socials img{
     padding-top: 8px;
+}
+
+.ourStaff :first-child .socials{
+    margin-left: 1px;
 }
