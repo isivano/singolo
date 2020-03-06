@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Lato-Black";
+    src: url(./assets/fonts/Lato-Black.ttf) format('truetype');
+}  
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url(./assets/fonts/Lato-Light.ttf) format('truetype');
+}  
+
+@font-face {
+    font-family: "Lato-Regular";
+    src: url(./assets/fonts/Lato-Regular.ttf) format('truetype');
+}  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1020px;
+    margin: 0 auto;  
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#singolo3h1 {
+    display: none;
+}
+
+
+/*////////////CONTACT////////////*/
