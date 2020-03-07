@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="singolo3.css">
     <title>Singolo</title>
+    <script>
+      function submitClick(){
+        let name = "" + document.contactForm.contactFormName.value;
+        let email = "" + document.contactForm.contactFormEmail.value;
+        let subject = "" + document.contactForm.contactFormSubject.value;
+        let describe = "" + document.contactForm.contactFormDescription.value;
+        alert(name+'\n'+email+'\n'+subject+'\n'+describe);
+      }
+  </script>
   </head>
   <body>
     <header>
@@ -12,12 +21,12 @@
     <section class="contact" id="contact">
       <h2>Get a Quote</h2>
       <p id="contactPhrase">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-      <form id="contactForm" action="">
-        <input type="text" name="contactFormName" id="contactFormName" placeholder="Name (Required)" required>
-        <input type="email" name="contactFormEmail" id="contactFormEmail" placeholder="Email (Required)" required>
-        <input type="text" name="contactFormSubject" id="contactFormSubject" placeholder="Subject">
-        <textarea type="text" name="contactFormDescription" id="contactFormDescription" placeholder="Describe your project in detail..."></textarea>
-        <input type="submit" name="contactFormSubmit" id="contactFormSubmit" value="Submit">
+      <form id="contactForm" name="contactForm" onsubmit="submitClick();" action="#">
+        <input type="text" form="contactForm" name="contactFormName" id="contactFormName" placeholder="Name (Required)" required>
+        <input type="email" form="contactForm" name="contactFormEmail" id="contactFormEmail" placeholder="Email (Required)" required>
+        <input type="text" form="contactForm" name="contactFormSubject" id="contactFormSubject" placeholder="Subject">
+        <textarea type="text" form="contactForm" name="contactFormDescription" id="contactFormDescription" placeholder="Describe your project in detail..."></textarea>
+        <input type="submit" form="contactForm" name="contactFormSubmit" id="contactFormSubmit" value="Submit">
       </form>
       <div class="contactInformation">
         <h3>Contact Information</h3>
