@@ -172,7 +172,7 @@ nav :first-child::before{
     content: url(assets/images/PhoneShadow.png);
 }
 
-#vertPhoneScreen{
+.vertPhoneScreen{
     height: 333px;
     width: 188px;
     position: absolute;
@@ -201,7 +201,7 @@ nav :first-child::before{
     transform: rotate(90deg) rotateX(180deg);
 }
 
-#horizPhoneScreen{
+.horizPhoneScreen{
     height: 188px;
     width: 333px;
     position: absolute;
@@ -209,6 +209,33 @@ nav :first-child::before{
     left: 60px;
     background-image: url(assets/images/PhoneScreen2.png);
     background-position: -125px -119px;
+}
+
+.vertPhoneButton, .horizPhoneButton{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 0px orange;
+    
+}
+
+.vertPhoneButton{
+    top: 408px;
+    left: 86px;
+}
+
+.horizPhoneButton{
+    top: 87px;
+    left: 9px;
+}
+
+.vertPhoneButton:hover,.horizPhoneButton:hover{
+    cursor: pointer;
+}
+
+.turnOff{
+    background-image: none;  
 }
 
 
@@ -235,6 +262,7 @@ nav :first-child::before{
     padding: 18px 0px 0px 40px;
     letter-spacing: -0.1pt;
     line-height: 23pt;
+    text-align: justify;
 }
 
 .servicesOptions {
@@ -252,9 +280,9 @@ nav :first-child::before{
     width: 54px;
     height: 54px;
     position: absolute;
-    top: 4px;
-    left: -78px;
-    border: 3px solid rgba(102, 109, 137);
+    top: 5px;
+    left: -77px;
+    border: 2px solid rgba(102, 109, 137);
     border-radius: 100px;
     text-align: center;
 }
@@ -277,6 +305,7 @@ nav :first-child::before{
     color: rgb(118, 126, 158);
     padding: 8px 0 0 1px;
     line-height: 16pt; 
+    text-align: justify;
     overflow: hidden;
 }
 
@@ -381,10 +410,11 @@ nav :first-child::before{
     font-family: "Lato-Light", Arial, Helvetica, sans-serif;
     font-size: 13pt;
     color: rgb(118, 126, 158);
+    width: 941px;
     margin: 17px 0px 0px 40px;
     letter-spacing: 0.3pt;
-    word-spacing: 0.2pt;
     line-height: 23pt;
+    text-align: justify;
 }
 
 .ourStaff {
@@ -413,6 +443,7 @@ nav :first-child::before{
     line-height: 16pt;
     word-spacing: 0.4pt;
     letter-spacing: -0.1pt;
+    text-align: justify;
 }
 
 .socials{
