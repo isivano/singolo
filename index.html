@@ -14,16 +14,17 @@
   </script>
   </head>
   <body>
-    <header id="home">
+    <span id="home" class="anchor"></span>
+    <header>
       <h1>singolo*</h1>
       <h2><a href="index.html">SINGOLO</a></h2>
       <nav>
         <ul>
-          <li><a href="#home">HOME</a></li><li><a href="#services">SERVICES</a></li><li><a href="#portfolio">PORTFOLIO</a></li><li><a href="#about">ABOUT</a></li><li><a href="#contact">CONTACT</a></li>
+          <li><a href="#home" id='navElement' class='currentNav'>HOME</a></li><li><a href="#services" id='navElement'>SERVICES</a></li><li><a href="#portfolio" id='navElement'>PORTFOLIO</a></li><li><a href="#about" id='navElement'>ABOUT</a></li><li><a href="#contact" id='navElement'>CONTACT</a></li>
         </ul>
       </nav>
     </header>     
-    <div class="slider">
+    <div class="slider">        
         <button id="buttonPrev">
           <svg version="1.1" id="arrowPrev" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 134 220" style="enable-background:new 0 0 134 220;" xml:space="preserve">
@@ -63,7 +64,8 @@
         <div id="horizPhoneButton" class="horizPhoneButton"></div>
       </div>
     </div>
-    <section class="services" id="services">
+    <section class="services">      
+      <span id="services" class="anchor"></span>
       <h2>Our Services</h2>
       <p id="servicesPhrase">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="servicesOptions">
@@ -111,7 +113,8 @@
         </div>
       </div>
     </section>
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio">
+      <span id="portfolio" class="anchor"></span>
       <h2>Portfolio</h2>
       <p id="portfolioPhrase">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
       <ul id="portfolioNavigation">
@@ -156,7 +159,8 @@
         </div>    
       </div>
     </section>
-    <section class="about" id="about">      
+    <section class="about"> 
+      <span id="about" class="anchor"></span>     
       <h2>About Us</h2>
       <p id="aboutPhrase">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="ourStaff">
@@ -192,7 +196,8 @@
         </div>
       </div>
     </section>
-    <section class="contact" id="contact">
+    <section class="contact">      
+      <span id="contact" class="anchor"></span>
       <h2>Get a Quote</h2>
       <p id="contactPhrase">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <form id="contactForm" name="contactForm" onsubmit="submitClick();" action="#">

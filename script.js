@@ -10,3 +10,13 @@ document.querySelector("#vertPhoneButton").addEventListener('click',function(){
     else screen.classList.remove('turnOff');
 });
 
+let navigationList = document.querySelectorAll("#navElement");
+let anchorList = document.querySelectorAll(".anchor");
+document.addEventListener('scroll',function(){    
+    for (let i=0; i<anchorList.length; i++){
+        if (window.pageYOffset>=anchorList[i].offsetTop){
+            navigationList.forEach(element => element.classList.remove('currentNav'));
+            navigationList[i].classList.add('currentNav');
+        }
+    }
+});
