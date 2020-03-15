@@ -383,22 +383,41 @@ nav a:active{
     background-color: rgb(102, 109, 137);
 }
 
-
 .portfolioGallery{
     width: 940px;
-    max-height: 820px;
     margin: 20px 0px 47px 40px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    overflow: hidden;
 }
 
 .portfolioImage{
+    position: relative;
     width: 220px;
     height: 187px;
     margin-bottom: 20px;
     background-color: rgb(70, 75, 94);
+}
+
+.portfolioImage:hover{
+    cursor: pointer;
+}
+
+.activeImg{
+    position: absolute;
+    border: 5px solid #F06C64;
+    top: -5px;
+    left: -5px;
+}
+
+.portfolioImage:nth-child(n+13){
+    display: none;
+}
+
+#portfolioNavigation button.currentTab{
+    background-color: rgb(102, 109, 137);;
+    color: rgb(222, 222, 222);
+    border-color: rgb(197, 197, 197);
 }
 
 
