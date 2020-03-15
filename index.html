@@ -6,11 +6,13 @@
     <title>Singolo</title>
     <script>
       function submitClick(){
-        let name = "" + document.contactForm.contactFormName.value;
-        let email = "" + document.contactForm.contactFormEmail.value;
         let subject = "" + document.contactForm.contactFormSubject.value;
         let describe = "" + document.contactForm.contactFormDescription.value;
-        alert(name+'\n'+email+'\n'+subject+'\n'+describe);}
+        if (subject!=="") subject = "Тема: "+ subject;
+        else subject = "Без темы";
+        if (describe!=="") describe = "Описание: "+ describe;
+        else describe = "Без описания"; 
+         alert('Письмо отправлено\n'+subject+'\n'+describe);}
   </script>
   </head>
   <body>

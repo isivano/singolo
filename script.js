@@ -13,8 +13,6 @@ document.addEventListener('scroll',function(){
 });
 
 
-/*////////////SLIDER////////////*/
-
 document.querySelector("#horizPhoneButton").addEventListener('click',function(){
     let screen = document.querySelector("#horizPhoneScreen");
     if (screen.classList.value.indexOf('turnOff')<0) screen.classList.add('turnOff');
@@ -78,6 +76,12 @@ document.querySelector("#portfolioButoonArtWork").addEventListener('click',funct
 });
 
 document.querySelector("#portfolioGallery").addEventListener('click',function(){
-    document.querySelectorAll("#portfolioGallery img").forEach(element => element.classList.remove('activeImg'));
-    event.target.classList.add('activeImg');
+    if (event.target.id!=="portfolioGallery"){
+        document.querySelectorAll("#portfolioGallery img").forEach(element => element.classList.remove('activeImg'));
+        event.target.classList.add('activeImg');
+    }
+});
+
+document.querySelector("#contactFormSubmit").addEventListener('click',function(){
+    console.log(document.contactForm.contactFormName.value);
 });
